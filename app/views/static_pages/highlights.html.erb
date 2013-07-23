@@ -1,8 +1,8 @@
-<% provide(:title, 'Contact') %>
+<% provide(:title, 'Highlights') %>
 <div class="well well-large">
 	<% if cookies[:language] != nil && cookies[:language] == "CN" %>
-  	<%= render 'chinese/contact' %>
+  	<%= render 'chinese/highlights' %>
   <% else %>
-    <%= render 'english/contact' %>
+    <%= render 'english/highlights' %>
   <% end %>
 </div>

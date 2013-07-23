@@ -4,12 +4,11 @@
       <%= link_to "Stephen Wan Accounting Corp", root_path, id: "logo" %>
       <nav>
         <ul class="nav pull-right">
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Accounting", accounting_path %></li>
-          <li><%= link_to "Tax", tax_path %></li>
-          <li><%= link_to "Consulting", consulting_path %></li>
-          <li><%= link_to "Employment", employment_path %></li>
-          <li><%= link_to "Contact", contact_path %></li>
+          <% if cookies[:language] != nil && cookies[:language] == "CN" %>
+            <%= render 'chinese/header' %>
+          <% else %>
+            <%= render 'english/header' %>
+          <% end %>
         </ul>
       </nav>
     </div>

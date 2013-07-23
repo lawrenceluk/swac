@@ -2,4 +2,8 @@
   <small>
     Copyright (c) STEPHEN WAN Accountancy Corporation 2013. All Rights Reserved.
   </small>
+  <ul>
+    <li><%= link_to "English", controller: "shared", action: "lang", id: 'EN', prevpath: request.path %></li>
+    <li><%= link_to "中文", controller: "shared", action: "lang", id: 'CN', prevpath: request.path %></li>
+  </ul>
 </footer>

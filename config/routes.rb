@@ -1,11 +1,15 @@
 Swac::Application.routes.draw do
 
   root 'static_pages#home'
+  match '/about',         to: 'static_pages#about',         via: 'get'
+  match '/highlights',    to: 'static_pages#highlights',    via: 'get'
   match '/accounting',    to: 'static_pages#accounting',    via: 'get'
   match '/tax',           to: 'static_pages#tax',           via: 'get'
   match '/consulting',    to: 'static_pages#consulting',    via: 'get'
   match '/contact',       to: 'static_pages#contact',       via: 'get'
   match '/employment',    to: 'static_pages#employment',    via: 'get'
+  match 'lang',           to: 'shared#lang',                via: 'get'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
